@@ -1,0 +1,116 @@
+/* Main working environment */
+.main{
+    height: 55%;
+}
+
+.main > .scan {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instructions{
+    margin-top: 2%;
+    margin-bottom: 0%;
+}
+
+input[type=text], [type=password], input[type=number], [type=email]{
+    margin-top: 1%;
+    height: 30px;
+    width: 70%;
+    background-color: white;
+    border-radius: 13px;
+    border-style: none;
+}
+
+.info{
+    padding-left: 10px;
+}
+/* Main working environment END */
+
+/* Progress bar */
+.progress {
+    height: 25%;
+}
+
+.progress > .progress-bar{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 30%;
+    margin-right: 30%;
+    height: 30px;
+    background-color: white;
+    border-radius: 13px; /* (height of inner div) / 2 + padding */
+}
+
+.progress-bar > .circle{
+    margin-top: 5px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #146eff;
+    background-color: #146eff;
+}
+
+.circle{
+    background-color: #146eff;
+}
+
+.circle:first-child{
+    margin-left: 15%;
+    background-color: #146eff;
+}
+
+.circle:last-child{ 
+    margin-right: 15%;
+    background-color: white;
+}
+/* Progress bar END */
+
+/* Footer */
+.footer{
+    height: 10%;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button:hover {
+    color: grey;
+}
+
+.next-page{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    background:none!important;
+    border:none; 
+    padding:0!important;
+    font-weight: bold;
+}
+
+/* Footer END */
+
+@media all and (min-width: 600px) {
+
+}
+
+@media all and (min-width: 800px) {
+    .logo    { order: 0; }
+    .main { order: 2; } 
+    .progress { order: 3; }
+    .footer  { order: 4; }
+}

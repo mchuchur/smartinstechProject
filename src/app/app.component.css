@@ -1,0 +1,14 @@
+.wrapper {
+    background: #146eff; 
+    height: 100%;
+    display: flex;  
+    flex-flow:column;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 10%;
+}
+
+.wrapper > * {
+    height: 100%;
+    /*flex: 1 100%;*/
+}

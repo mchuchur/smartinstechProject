@@ -1,0 +1,104 @@
+<!-- Main working environment -->
+<div class="main">
+    <div class="flight-information">
+
+        <h1>{{currentAirline.name}}</h1>
+
+        <button [routerLink]="['/airline/login']"  class="btn btn-link">Logout</button>
+        <button (click)="delete()" class="btn btn-link">Delete</button>
+
+        
+        <form class="registration" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+            <p class="instructions">Update informations</p>
+            
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" formControlName="name" class="info form-control" [ngClass]="{ 'is-invalid': submitted && f.name.errors }">
+                <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                    <div *ngIf="f.name.errors.required">Name is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" formControlName="email" class="info form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"/>
+                <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                    <div *ngIf="f.email.errors.required">Email is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" formControlName="username" class="info form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }"/>
+                <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                    <div *ngIf="f.username.errors.required">Username is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" formControlName="password" class="info form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }"/>
+                <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                    <div *ngIf="f.password.errors.required">Password is required</div>
+                    <div *ngIf="f.password.errors.minlength">Password must be at least 6 characters</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>LinkToWS</label>
+                <input type="url" formControlName="linkToWS" class="info form-control" [ngClass]="{ 'is-invalid': submitted && f.linkToWS.errors }"/>
+                <div *ngIf="submitted && f.linkToWS.errors" class="invalid-feedback">
+                    <div *ngIf="f.linkToWS.errors.required">LinkToWS is required</div>
+                </div>
+            </div>
+<!--
+            <div class="form-group">
+                <label>pathToData</label>
+                <input type="text" formControlName="pathToData" class="info form-control" [ngClass]="{ 'is-invalid': submitted && f.pathToData.errors }"/>
+                <div *ngIf="submitted && f.pathToData.errors" class="invalid-feedback">
+                    <div *ngIf="f.pathToData.errors.required">pathToData is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>TRR</label>
+                <input type="text" formControlName="TRR" class="info form-control" [ngClass]="{ 'is-invalid': submitted && f.TRR.errors }"/>
+                <div *ngIf="submitted && f.TRR.errors" class="invalid-feedback">
+                    <div *ngIf="f.TRR.errors.required">TRR is required</div>
+                </div>
+            </div>
+-->
+            <div class="form-group">
+                <label>ethAddress</label>
+                <input type="text" formControlName="ethAddress" class="info form-control" [ngClass]="{ 'is-invalid': submitted && f.ethAddress.errors }"/>
+                <div *ngIf="submitted && f.ethAddress.errors" class="invalid-feedback">
+                    <div *ngIf="f.ethAddress.errors.required">TRR is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>insurancePrice</label>
+                <input type="number" formControlName="insurancePrice" class="info form-control" [ngClass]="{ 'is-invalid': submitted && f.insurancePrice.errors }"/>
+                <div *ngIf="submitted && f.insurancePrice.errors" class="invalid-feedback">
+                    <div *ngIf="f.insurancePrice.errors.required">insurancePrice is required</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>maxPayout</label>
+                <input type="number" formControlName="maxPayout" class="info form-control" [ngClass]="{ 'is-invalid': submitted && f.maxPayout.errors }"/>
+                <div *ngIf="submitted && f.maxPayout.errors" class="invalid-feedback">
+                    <div *ngIf="f.maxPayout.errors.required">maxPayout is required</div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <button class="next-page">Update</button>
+            </footer>
+            <!-- Footer END -->
+        </form>
+    </div>
+</div>
+<!-- Main working environment END -->
+

@@ -1,0 +1,78 @@
+/* Main working environment */
+.main{
+    height: 55%;
+}
+
+.main > .scan {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.instructions{
+    margin-top: 2%;
+    margin-bottom: 0%;
+}
+
+input[type=text], [type=password], input[type=number], [type=email], [type=url]{
+    margin-top: 1%;
+    height: 30px;
+    width: 50%;
+    background-color: white;
+    border-radius: 13px;
+    border-style: none;
+    margin-left: 2%;
+}
+
+.info{
+    padding-left: 10px;
+}
+
+/* Main working environment END */
+
+
+/* Footer */
+.footer{
+    height: 10%;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+button:hover {
+    color: grey;
+}
+
+.next-page{
+    vertical-align: middle;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+    background:none!important;
+    border:none; 
+    padding:0!important;
+    font-weight: bold;
+}
+
+/* Footer END */
+
+@media all and (min-width: 600px) {
+
+}
+
+@media all and (min-width: 800px) {
+    .logo    { order: 0; }
+    .main { order: 2; } 
+    .progress { order: 3; }
+    .footer  { order: 4; }
+}
